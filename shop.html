@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Shop Collection | DecantLAB</title>
+    <link rel="stylesheet" href="css/style.css?v=5.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <div class="nmra-bar">ALL OUR PRODUCTS ARE <strong>N.M.R.A REGISTERED</strong> ✓</div>
+
+    <nav class="main-nav">
+        <a href="index.html" class="nav-brand">Decant<span>LAB</span></a>
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="index.html">Home</a></li>
+            <li class="nav-item">
+                <a href="#">Brands <i class="fas fa-chevron-down" style="font-size: 0.6rem;"></i></a>
+                <div class="dropdown">
+                    <a href="shop.html?brand=Dior">Dior</a>
+                    <a href="shop.html?brand=Chanel">Chanel</a>
+                    <a href="shop.html?brand=Armani">Giorgio Armani</a>
+                    <a href="shop.html?brand=YSL">YSL</a>
+                </div>
+            </li>
+            <li class="nav-item"><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="nav-icons">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-shopping-bag"></i>
+        </div>
+    </nav>
+
+    <div style="padding-top: 60px;">
+        <h2 class="section-title scroll-fade" id="shopTitle">Our Collection</h2>
+        
+        <div class="cat-tabs scroll-fade">
+            <button class="cat-tab active" data-cat="all">All Essence</button>
+            <button class="cat-tab" data-cat="Fragrance">Signature</button>
+            <button class="cat-tab" data-cat="Him">For Him</button>
+            <button class="cat-tab" data-cat="Unisex">Unisex</button>
+        </div>
+    </div>
+
+    <section class="main-grid" id="productGrid">
+        <!-- Products injected here via script.js -->
+    </section>
+
+    <!-- LUXURY FOOTER -->
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-brand-col">
+                <a href="index.html" class="footer-logo">Decant<span>LAB</span></a>
+                <div class="newsletter-box">
+                    <input type="email" placeholder="Enter your email">
+                    <button class="newsletter-btn"><i class="fas fa-arrow-right"></i></button>
+                </div>
+                <p>DecantLAB Sri Lanka delivers authentic branded fragrances with exceptional service, fast delivery and tailored gifting.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Main Menu</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop All</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Menu</h4>
+                <ul>
+                    <li><a href="shop.html?category=Him">For Him</a></li>
+                    <li><a href="shop.html?category=Fragrance">Signature Scents</a></li>
+                    <li><a href="#">Brand</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Top Brands</h4>
+                <ul>
+                    <li><a href="shop.html?brand=Chanel">Chanel</a></li>
+                    <li><a href="shop.html?brand=Dior">Dior</a></li>
+                    <li><a href="shop.html?brand=Gucci">Gucci</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom" style="margin-top: 60px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center;">
+            <p class="copy-text" style="color: white; opacity: 0.7;">© DecantLAB 2026</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js?v=4.0"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const brandFilter = urlParams.get('brand');
+            
+            if (brandFilter) {
+                const filtered = mockProducts.filter(p => p.brand.toLowerCase().includes(brandFilter.toLowerCase()));
+                renderMainGrid(filtered);
+                document.getElementById('shopTitle').innerText = brandFilter + " Collection";
+            } else {
+                renderMainGrid();
+            }
+            
+            const tabs = document.querySelectorAll('.cat-tab');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    const cat = tab.dataset.cat;
+                    const filtered = cat === 'all' ? mockProducts : mockProducts.filter(p => p.category === cat);
+                    renderMainGrid(filtered);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Heritage | DecantLAB</title>
+    <link rel="stylesheet" href="css/style.css?v=4.0">
+</head>
+<body style="background: var(--bg-white);">
+    <div class="nmra-bar">ALL OUR PRODUCTS ARE <strong>N.M.R.A REGISTERED</strong> ✓</div>
+    <nav class="main-nav">
+        <a href="index.html" class="nav-brand">Decant<span>LAB</span></a>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+        </ul>
+    </nav>
+
+    <div style="padding: 120px 10%; max-width: 1200px; margin: auto; text-align: center;">
+        <h1 class="section-title scroll-fade">The DecantLAB Story</h1>
+        <p class="scroll-fade" style="margin-top: 40px; color: var(--gray-mid); font-size: 1.2rem; line-height: 2; font-weight: 400; max-width: 800px; margin-inline: auto;">
+            In the pursuit of olfactory perfection, <strong>DecantLAB</strong> was founded in 2026 as a sanctuary for the discerning fragrance connoisseur. Based in Wattala, our laboratory was born from a singular vision: to democratize luxury by providing absolute transparency and authenticity in every drop.
+        </p>
+        <p class="scroll-fade" style="margin-top: 30px; color: var(--gray-mid); font-size: 1.2rem; line-height: 2; font-weight: 400; max-width: 800px; margin-inline: auto;">
+            We believe that a fragrance is more than a scent—it is a liquid memory, a signature of identity. By sourcing directly from authorized distributors and implementing a rigorous multi-stage verification process, we ensure that every decant and bottle in our collection is a masterpiece of its original house.
+        </p>
+        <p class="scroll-fade" style="margin-top: 30px; color: var(--gray-mid); font-size: 1.2rem; line-height: 2; font-weight: 400; max-width: 800px; margin-inline: auto;">
+            Today, DecantLAB stands as Sri Lanka's premier destination for niche and luxury fragrances, offering an unparalleled concierge experience that helps you find your signature essence in an world of endless possibilities.
+        </p>
+    </div>
+
+    <!-- LUXURY FOOTER -->
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-brand-col">
+                <a href="index.html" class="footer-logo">Decant<span>LAB</span></a>
+                <p>DecantLAB Sri Lanka delivers authentic branded fragrances with exceptional service.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Main Menu</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop All</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom" style="margin-top: 60px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center;">
+            <p class="copy-text" style="color: white; opacity: 0.7;">© DecantLAB 2026</p>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.scroll-fade').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

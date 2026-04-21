@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Return Excellence | DecantLAB</title>
+    <link rel="stylesheet" href="css/style.css?v=4.0">
+</head>
+<body style="background: var(--bg-white);">
+    <div class="nmra-bar">ALL OUR PRODUCTS ARE <strong>N.M.R.A REGISTERED</strong> ✓</div>
+    <nav class="main-nav">
+        <a href="index.html" class="nav-brand">Decant<span>LAB</span></a>
+    </nav>
+
+    <div style="padding: 100px 10%; max-width: 900px; margin: auto;">
+        <h1 class="section-title scroll-fade" style="text-align: left;">Returns & Refunds</h1>
+        <p class="scroll-fade" style="color: var(--gray-mid); margin-bottom: 30px; line-height: 1.8;">
+            We strive for absolute satisfaction with every discovery. Our return policy is designed to maintain the highest standards of hygiene and authenticity for our community.
+        </p>
+        
+        <h2 class="scroll-fade" style="margin: 40px 0 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 2px;">1. Eligibility</h2>
+        <p class="scroll-fade" style="color: var(--gray-mid); margin-bottom: 20px; line-height: 1.8;">
+            Due to the nature of our products, returns are only accepted for items that remain in their original, unopened, and factory-sealed packaging within 7 days of delivery.
+        </p>
+        
+        <h2 class="scroll-fade" style="margin: 40px 0 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 2px;">2. Quality Concerns</h2>
+        <p class="scroll-fade" style="color: var(--gray-mid); margin-bottom: 20px; line-height: 1.8;">
+            In the rare event of a manufacturing defect or damage during transit, please contact our concierge team via WhatsApp with photographic evidence within 24 hours of receipt.
+        </p>
+
+        <h2 class="scroll-fade" style="margin: 40px 0 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 2px;">3. Process</h2>
+        <p class="scroll-fade" style="color: var(--gray-mid); margin-bottom: 20px; line-height: 1.8;">
+            Approved refunds are processed via the original payment method or bank transfer within 5 business days of the item being returned and inspected.
+        </p>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-bottom">
+            <p class="copy-text">© DecantLAB 2026</p>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.scroll-fade, .section-title').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

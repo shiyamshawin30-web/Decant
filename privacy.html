@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Privacy Policy | DecantLAB</title>
+    <link rel="stylesheet" href="css/style.css?v=4.0">
+</head>
+<body style="background: var(--bg-white);">
+    <div class="nmra-bar">ALL OUR PRODUCTS ARE <strong>N.M.R.A REGISTERED</strong> ✓</div>
+    <nav class="main-nav">
+        <a href="index.html" class="nav-brand">Decant<span>LAB</span></a>
+    </nav>
+
+    <div style="padding: 100px 10%; max-width: 900px; margin: auto;">
+        <h1 class="section-title scroll-fade" style="text-align: left;">Privacy Commitment</h1>
+        <p class="scroll-fade" style="color: var(--gray-mid); margin-bottom: 30px; line-height: 1.8;">
+            At <strong>DecantLAB</strong>, your privacy is as sacred as our scents. This policy outlines how we protect your personal data and ensure a secure shopping experience.
+        </p>
+        
+        <h2 class="scroll-fade" style="margin: 40px 0 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 2px;">1. Data Collection</h2>
+        <p class="scroll-fade" style="color: var(--gray-mid); margin-bottom: 20px; line-height: 1.8;">
+            We collect only essential information required to process your orders and provide personalized fragrance recommendations. This includes your contact details and shipping address.
+        </p>
+        
+        <h2 class="scroll-fade" style="margin: 40px 0 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 2px;">2. Secure Transactions</h2>
+        <p class="scroll-fade" style="color: var(--gray-mid); margin-bottom: 20px; line-height: 1.8;">
+            All transactions are encrypted. We do not store your credit card information on our servers; payments are handled by certified third-party processors.
+        </p>
+
+        <h2 class="scroll-fade" style="margin: 40px 0 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 2px;">3. Confidentiality</h2>
+        <p class="scroll-fade" style="color: var(--gray-mid); margin-bottom: 20px; line-height: 1.8;">
+            Your personal information is never sold, traded, or shared with external parties for marketing purposes.
+        </p>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-bottom">
+            <p class="copy-text">© DecantLAB 2026</p>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.scroll-fade, .section-title').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

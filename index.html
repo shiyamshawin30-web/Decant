@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>DecantLAB | Luxury Fragrance Marketplace</title>
+    <link rel="stylesheet" href="css/style.css?v=4.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- NMRA TOP BAR -->
+    <div class="nmra-bar">
+        ALL OUR PRODUCTS ARE <strong>N.M.R.A REGISTERED</strong> ✓
+    </div>
+
+    <!-- MAIN NAVBAR -->
+    <nav class="main-nav">
+        <a href="index.html" class="nav-brand">
+           Decant<span>LAB</span>
+        </a>
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="shop.html">Shop</a></li>
+            <li class="nav-item">
+                <a href="#">Brands <i class="fas fa-chevron-down" style="font-size: 0.6rem;"></i></a>
+                <div class="dropdown">
+                    <a href="shop.html?brand=Dior">Dior</a>
+                    <a href="shop.html?brand=Chanel">Chanel</a>
+                    <a href="shop.html?brand=Armani">Giorgio Armani</a>
+                    <a href="shop.html?brand=YSL">YSL</a>
+                    <a href="shop.html?brand=Creed">Creed</a>
+                </div>
+            </li>
+            <li class="nav-item"><a href="#sales">Sales & Promos</a></li>
+            <li class="nav-item"><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="nav-icons">
+            <i class="fas fa-search"></i>
+            <i class="far fa-user"></i>
+            <div style="position: relative;">
+                <i class="fas fa-shopping-bag"></i>
+                <span style="position: absolute; top: -10px; right: -10px; background: white; color: black; font-size: 0.6rem; font-weight: 900; padding: 2px 5px; border-radius: 50%;">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO PROMO (PARALLAX) -->
+    <header class="hero-promo">
+        <div class="hero-content" style="text-align: center; color: white; z-index: 2; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: space-between; padding: 120px 5% 80px;">
+            <div class="hero-top-text" style="text-align: left;">
+                <h2 style="font-size: 5rem; font-weight: 900; line-height: 0.9; text-transform: uppercase; letter-spacing: 5px;">Luxury<br>Perfume</h2>
+                <a href="shop.html" class="hero-shop-btn" style="display: inline-block; margin-top: 30px; padding: 12px 30px; border: 2px solid white; color: white; text-transform: uppercase; font-weight: 800; letter-spacing: 2px; border-radius: 4px;">Shop Now</a>
+            </div>
+            
+            <div class="hero-bottom-text">
+                <h1 style="font-size: 6rem; font-weight: 900; letter-spacing: 15px; text-transform: uppercase; margin-bottom: 10px;">Elegance</h1>
+                <p style="letter-spacing: 8px; text-transform: uppercase; font-weight: 500; font-size: 1.2rem;">Redefined in every drop</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 1: BEST SELLERS (HORIZONTAL SCROLL) -->
+    <section>
+        <h2 class="section-title scroll-fade">Best Sellers</h2>
+        <div class="best-sellers-scroll">
+            <div class="scroll-track" id="bestSellersTrack">
+                <!-- Products injected here via script.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- MAN BANNER SECTION -->
+    <section class="man-banner scroll-fade">
+        <div class="banner-overlay">
+            <div class="banner-text">
+                <h3>Best way a Man could ever change</h3>
+                <p>Define Your Presence Experience bold, long-lasting fragrances that embody strength, confidence, and timeless style.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: EXPLORE -->
+    <section class="container" style="padding: 0 5%;">
+        <h2 class="section-title scroll-fade">Explore Collection</h2>
+        <div class="main-grid" id="productGrid">
+            <!-- Main grid products injected here via script.js -->
+        </div>
+    </section>
+
+    <!-- MEDIA SECTION (IMAGE OR VIDEO) -->
+    <section class="media-section scroll-fade">
+        <div class="media-container">
+            <!-- To use a video, uncomment the video tag below and comment out the img tag -->
+            <!-- <video src="assets/promo-video.mp4" autoplay muted loop playsinline class="media-element"></video> -->
+            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80&w=1920&h=1080" alt="Promo Image" class="media-element">
+            <div class="media-overlay">
+                <h3>The Art of Scent</h3>
+                <p>Experience the most exclusive collection of authentic decants.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BRAND TICKERS -->
+    <section class="brand-ticker-section">
+        <div class="ticker-row ticker-left">
+            <div class="ticker-track">
+                <span class="brand-logo">Dior</span>
+                <span class="brand-logo">Chanel</span>
+                <span class="brand-logo">Gucci</span>
+                <span class="brand-logo">Versace</span>
+                <span class="brand-logo">Armani</span>
+                <span class="brand-logo">Prada</span>
+                <span class="brand-logo">Tom Ford</span>
+                <span class="brand-logo">Hermès</span>
+                <!-- Duplicate for infinite effect -->
+                <span class="brand-logo">Dior</span>
+                <span class="brand-logo">Chanel</span>
+                <span class="brand-logo">Gucci</span>
+                <span class="brand-logo">Versace</span>
+                <span class="brand-logo">Armani</span>
+                <span class="brand-logo">Prada</span>
+                <span class="brand-logo">Tom Ford</span>
+                <span class="brand-logo">Hermès</span>
+            </div>
+        </div>
+        <div class="ticker-row ticker-right">
+            <div class="ticker-track">
+                <span class="brand-logo">Calvin Klein</span>
+                <span class="brand-logo">Hugo Boss</span>
+                <span class="brand-logo">Burberry</span>
+                <span class="brand-logo">Creed</span>
+                <span class="brand-logo">Bvlgari</span>
+                <span class="brand-logo">Lancôme</span>
+                <span class="brand-logo">Givenchy</span>
+                <span class="brand-logo">Valentino</span>
+                <!-- Duplicate for infinite effect -->
+                <span class="brand-logo">Calvin Klein</span>
+                <span class="brand-logo">Hugo Boss</span>
+                <span class="brand-logo">Burberry</span>
+                <span class="brand-logo">Creed</span>
+                <span class="brand-logo">Bvlgari</span>
+                <span class="brand-logo">Lancôme</span>
+                <span class="brand-logo">Givenchy</span>
+                <span class="brand-logo">Valentino</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- LUXURY FOOTER -->
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-brand-col">
+                <a href="index.html" class="footer-logo">Decant<span>LAB</span></a>
+                <div class="newsletter-box">
+                    <input type="email" placeholder="Enter your email">
+                    <button class="newsletter-btn"><i class="fas fa-arrow-right"></i></button>
+                </div>
+                <p>DecantLAB Sri Lanka delivers authentic branded fragrances with exceptional service, fast delivery and tailored gifting. Discover your perfect scent and enjoy a memorable shopping journey.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Main Menu</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop All</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Menu</h4>
+                <ul>
+                    <li><a href="shop.html?category=Him">For Him</a></li>
+                    <li><a href="shop.html?category=Signature">Signature Scents</a></li>
+                    <li><a href="#">Brand</a></li>
+                    <li><a href="#">Best Sellers</a></li>
+                    <li><a href="#">Profile</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Top Brands</h4>
+                <ul>
+                    <li><a href="shop.html?brand=Chanel">Chanel</a></li>
+                    <li><a href="shop.html?brand=Dior">Dior</a></li>
+                    <li><a href="shop.html?brand=Gucci">Gucci</a></li>
+                    <li><a href="shop.html?brand=Versace">Versace</a></li>
+                    <li><a href="shop.html?brand=Calvin Klein">Calvin Klein</a></li>
+                    <li><a href="shop.html?brand=Hugo Boss">Hugo Boss</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom scroll-fade" style="margin-top: 60px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center;">
+            <p class="copy-text" style="color: white; opacity: 0.7;">© DecantLAB 2026. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js?v=4.0"></script>
+</body>
+</html>
