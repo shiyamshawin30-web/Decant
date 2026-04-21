@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel | DecantLAB</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { background: #f4f4f4; padding: 40px 5%; }
+        .admin-container { max-width: 1000px; margin: 0 auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        h1 { margin-bottom: 30px; text-transform: uppercase; letter-spacing: 3px; border-bottom: 2px solid #000; padding-bottom: 10px; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; font-weight: 800; text-transform: uppercase; font-size: 0.8rem; margin-bottom: 8px; }
+        input, select, textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; }
+        .btn-save { background: #000; color: white; border: none; padding: 15px 30px; text-transform: uppercase; font-weight: 800; letter-spacing: 2px; cursor: pointer; border-radius: 4px; width: 100%; }
+        .product-list { margin-top: 50px; }
+        .product-item { display: flex; align-items: center; justify-content: space-between; padding: 15px; border-bottom: 1px solid #eee; }
+        .product-info { display: flex; align-items: center; gap: 20px; }
+        .product-item img { width: 50px; height: 50px; object-fit: cover; border-radius: 4px; }
+        .btn-delete { color: #ff4444; cursor: pointer; border: none; background: none; font-size: 1.2rem; }
+        .firebase-config-notice { background: #fff3cd; color: #856404; padding: 15px; border-radius: 4px; margin-bottom: 30px; font-size: 0.9rem; border: 1px solid #ffeeba; }
+    </style>
+</head>
+<body>
+
+    <div class="admin-container">
+        <div class="header" style="display: flex; justify-content: space-between; align-items: center;">
+            <h1>DecantLAB Admin</h1>
+            <a href="index.html" style="color: #000; font-weight: 700; text-transform: uppercase; font-size: 0.8rem;"><i class="fas fa-arrow-left"></i> Back to Site</a>
+        </div>
+
+        <div class="firebase-config-notice">
+            <i class="fas fa-exclamation-triangle"></i> <strong>Note:</strong> To use Firebase, please add your configuration to <code>js/admin.js</code>. For now, this panel uses <strong>LocalStorage</strong> to save products.
+        </div>
+
+        <form id="productForm">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div class="form-group">
+                    <label>Product Name</label>
+                    <input type="text" id="pName" required placeholder="e.g. My Way Floral">
+                </div>
+                <div class="form-group">
+                    <label>Brand</label>
+                    <input type="text" id="pBrand" required placeholder="e.g. Giorgio Armani">
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;">
+                <div class="form-group">
+                    <label>Price (LKR)</label>
+                    <input type="number" id="pPrice" required>
+                </div>
+                <div class="form-group">
+                    <label>Old Price (Optional)</label>
+                    <input type="number" id="pOldPrice">
+                </div>
+                <div class="form-group">
+                    <label>Stock Quantity</label>
+                    <input type="number" id="pStock" required value="10">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Available Sizes (Comma separated)</label>
+                <input type="text" id="pSizes" required placeholder="e.g. 30ml, 50ml, 100ml">
+            </div>
+
+            <div class="form-group">
+                <label>Image URL</label>
+                <input type="text" id="pImage" required placeholder="Paste image link here">
+            </div>
+
+            <div class="form-group">
+                <label>Description</label>
+                <textarea id="pDesc" rows="4" placeholder="Enter product details..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-save">Add Product to Store</button>
+        </form>
+
+        <div class="product-list">
+            <h3>Current Inventory</h3>
+            <div id="adminProductGrid">
+                <!-- Products list here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

@@ -199,12 +199,35 @@ window.observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Sync LocalStorage Products
+    const storedProducts = JSON.parse(localStorage.getItem('decantlab_products')) || [];
+    if (storedProducts.length > 0) {
+        // Merge stored products with mock ones, avoiding duplicates if any
+        const mockIds = mockProducts.map(p => p.id);
+        const filteredStored = storedProducts.filter(p => !mockIds.includes(p.id));
+        allProducts = [...mockProducts, ...filteredStored];
+    }
+
     // Initial Render
     renderBestSellers();
     renderMainGrid();
     
     // Observe initial static elements
     document.querySelectorAll('.section-title, .scroll-fade').forEach(el => window.observer.observe(el));
+
+    // Search Functionality
+    const searchInput = document.getElementById('productSearch');
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            const filtered = allProducts.filter(p => 
+                p.name.toLowerCase().includes(query) || 
+                p.brand.toLowerCase().includes(query) ||
+                p.type.toLowerCase().includes(query)
+            );
+            renderMainGrid(filtered);
+        });
+    }
 
     // Navbar Scroll Effect
     const nav = document.querySelector('.main-nav');
@@ -322,5 +345,12 @@ function selectSize(btn) {
 
 function addToCart(id) {
     const p = allProducts.find(prod => prod.id === id);
-    alert(`Added ${p.name} to your DecantLAB bag!`);
+    const activeSizeBtn = document.querySelector(`.product-card:has(button[onclick="addToCart('${id}')"]) .ml-btn.active`);
+    const size = activeSizeBtn ? activeSizeBtn.innerText : 'Standard';
+    
+    const whatsappNumber = "94771234567"; // Replace with actual number
+    const message = `Hello DecantLAB! I'm interested in ordering:\n\n*Product:* ${p.brand} - ${p.name}\n*Size:* ${size}\n*Price:* LKR ${p.price.toLocaleString()}\n\nPlease let me know the availability and payment details.`;
+    
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
 }
