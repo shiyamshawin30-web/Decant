@@ -83,6 +83,14 @@
     <!-- SECTION 2: EXPLORE -->
     <section class="container" style="padding: 0 5%;">
         <h2 class="section-title scroll-fade">Explore Collection</h2>
+        
+        <!-- SEARCH BAR -->
+        <div class="search-container scroll-fade" style="max-width: 600px; margin: 0 auto 50px; position: relative;">
+            <input type="text" id="productSearch" placeholder="Search for perfumes, brands or scents..." 
+                   style="width: 100%; padding: 15px 25px 15px 50px; border: 1px solid #eee; border-radius: 50px; font-size: 1rem; outline: none; transition: 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+            <i class="fas fa-search" style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%); color: #999;"></i>
+        </div>
+
         <div class="main-grid" id="productGrid">
             <!-- Main grid products injected here via script.js -->
         </div>
@@ -93,7 +101,10 @@
         <div class="media-container">
             <!-- To use a video, uncomment the video tag below and comment out the img tag -->
             <!-- <video src="assets/promo-video.mp4" autoplay muted loop playsinline class="media-element"></video> -->
-            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80&w=1920&h=1080" alt="Promo Image" class="media-element">
+            <picture>
+                <source srcset="assets/Rosesphone.webp" media="(max-width: 768px)">
+                <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80&w=1920&h=1080" alt="Promo Image" class="media-element">
+            </picture>
             <div class="media-overlay">
                 <h3>The Art of Scent</h3>
                 <p>Experience the most exclusive collection of authentic decants.</p>

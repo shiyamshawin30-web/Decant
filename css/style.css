@@ -685,44 +685,56 @@ button:active, .add-cart-btn:active {
         font-size: 0.85rem !important;
     }
 
-    /* Product Grid Mobile Fix (2 PER ROW) */
+    /* Product Grid Mobile Fix (1 PER ROW for "Bigger" products) */
     .main-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        padding: 0 5% 60px;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 0 8% 60px;
     }
 
     .product-card {
-        padding: 15px;
+        padding: 20px;
     }
 
     .card-img {
-        height: 180px;
-        margin-bottom: 15px;
+        height: 280px;
+        margin-bottom: 20px;
     }
 
     .card-name {
-        font-size: 0.9rem !important;
-        min-height: 2.4em;
+        font-size: 1.1rem !important;
+        min-height: auto;
     }
 
     .card-brand {
-        font-size: 0.65rem !important;
+        font-size: 0.8rem !important;
     }
 
     .card-price {
-        font-size: 0.9rem !important;
-        margin-bottom: 15px;
+        font-size: 1.1rem !important;
+        margin-bottom: 20px;
     }
 
     .ml-btn {
-        padding: 6px 10px;
-        font-size: 0.65rem;
+        padding: 8px 15px;
+        font-size: 0.8rem;
     }
 
     .add-cart-btn {
-        padding: 10px;
-        font-size: 0.75rem;
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+
+    /* Scroll Animation Fix for Mobile */
+    .scroll-fade {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .scroll-fade.visible {
+        opacity: 1;
+        transform: translateY(0);
     }
 
     /* Best Sellers Mobile */
@@ -734,6 +746,25 @@ button:active, .add-cart-btn:active {
     .section-title {
         font-size: 1.4rem;
         margin: 40px 0 20px;
+    }
+
+    /* Media Section Mobile */
+    .media-section {
+        padding: 40px 5%;
+    }
+
+    .media-container {
+        height: 80vh; /* Taller for mobile to show the portrait Roses image */
+    }
+
+    .media-overlay h3 {
+        font-size: 2.2rem;
+        letter-spacing: 3px;
+    }
+
+    .media-overlay p {
+        font-size: 0.9rem;
+        letter-spacing: 1px;
     }
 
     /* Footer Mobile Centering */
